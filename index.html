@@ -1,49 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es,cr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Encriptador de texto</title>
 </head>
 <body>
     <header>
-        <img class="logo" src="img/Logo.png" alt="Logo de alura">
+        <img src="img/Logo.png" alt="Logo de alura" class="logo">
     </header>
     <main>
-        <section class="seccion-izquierda">
-            <div class="contenedor-texto">
-                <textarea placeholder="Ingrese el texto aqui" class="caja-texto"></textarea>
-            </div>
+        <section class="contenedor-seccion1">
+            <textarea class="text-encriptar" placeholder="Ingrese el texto aqui"></textarea>
             <div class="alerta">
-                <img src="img/bi_exclamation-circle-fill.png" alt="icono de alerta">
-                <p>Solo letras minusculas y sin acentos.</p>
+                <img src="img/bi_exclamation-circle-fill.png" alt="Logo de alerta">
+                <p class="parrafo-alerta">Solo letras minusculas y sin acentos.</p>
             </div>
-            <div class="contenedor-botones">
-                <input type="button" class="b-encriptar" value="Encriptador">
-                <input type="button" class="b-desencriptar" value="Desencriptador">
+            <div class="botones">
+                <input type="button" class="b-encriptar" value="Encriptar" onclick="Encriptar()">
+                <input type="button" class="b-desencriptar" value="Desencriptar" onclick="Desencriptar()">
+            </div>
             </div>
         </section>
-        <section class="seccion-derecha">
-            <div class="contenedor-muñeco">
-                <img src="img/Muñeco.png" alt="logo de Muñeco">
+        <section class="contenedor-seccion2">
+            <div class="mensaje-encriptado">
+                <img src="img/Muñeco.png" alt="Ilustracion" class="ilustracion">
+                <h2 class="titulo-mensaje">Ningun mensaje fue encontrado</h2>
+                <p class="parrafo-mensaje">Ingresa el texto que desees encriptar o desencriptar</p>
             </div>
-            <div class="mensaje-derecho">
-                <h3>
-                    Ningun mensaje fue <br> encontrado
-                </h3>
-                <p>
-                    Ingresa el texto que desees encriptar <br> o desencriptar
-                </p>
-            </div>
-            <div class="copiar-texto">
-                <input type="button" class="b-copiar" value="Copiar">
-            </div class>
-            <div class="contenedor-resultado">
-                <p class="texto-resultado"></p>
-            </div>
+            <textarea type="mensaje" class="mensaje" readonly></textarea>
+            <button type="submit" class="b-copiar">Copiar</button>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p class="copyright">&copy; Copyright 2024 -Encriptador de texto - desarrollado por Josue Azofeifa</p> 
+        <a href="#" rel="">
+            <img src="img/linkedin.png" alt="Linkedln" class="linkedln">
+        </a>   
+        <a href="#" rel="">
+            <img src="img/github_logo.png" alt="Github" class="github">
+        </a> 
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
